@@ -1,0 +1,2668 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHPALWAK MOBILES — Premium Mobile & Technology Retail in Afghanistan</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png">
+    <meta name="description" content="KHPALWAK MOBILES — Afghanistan's premium destination for authentic smartphones, Apple & Samsung products, tablets, wearables, and accessories. Expert guidance, nationwide delivery, and trusted warranty.">
+    <meta name="keywords" content="Khpalwak Mobiles, iPhone Afghanistan, Samsung Afghanistan, smartphones Kabul, mobile accessories Afghanistan, premium phones Afghanistan, Khpalwak Mobile">
+    <meta property="og:title" content="KHPALWAK MOBILES — Premium Mobile & Technology Retail">
+    <meta property="og:description" content="Authentic smartphones, tablets, and accessories with trusted service and expert guidance. Visit our store or shop online.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#FEF9F3">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23C9A96E' width='100' height='100' rx='20'/><text x='50' y='62' text-anchor='middle' fill='white' font-size='40' font-weight='bold' font-family='serif'>K</text></svg>">
+
+    <style>
+        :root {
+            --milky-white: #FFFDF7;
+            --warm-ivory: #FEF9F3;
+            --soft-cream: #FFF8F0;
+            --champagne: #F5EDDF;
+            --warm-beige: #EDE4D4;
+            --soft-taupe: #D4C9B8;
+            --warm-gray: #A89880;
+            --deep-charcoal: #3D3420;
+            --charcoal-dark: #2C2416;
+            --champagne-gold: #C9A96E;
+            --muted-gold: #B8945A;
+            --elegant-gold: #D4B886;
+            --gold-light: #E8D5B0;
+            --gold-pale: #F2E6D0;
+            --white-pure: #FFFFFF;
+            --success: #6B8E6B;
+            --error: #C46A5E;
+            --border-subtle: #E8DFD2;
+            --shadow-warm: 0 4px 24px rgba(60, 40, 20, 0.06);
+            --shadow-card: 0 2px 16px rgba(60, 40, 20, 0.05);
+            --shadow-elevated: 0 8px 40px rgba(60, 40, 20, 0.10);
+            --transition-smooth: 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+            --transition-fast: 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --font-heading: 'Georgia', 'Times New Roman', serif;
+            --font-body: 'Inter', 'SF Pro Display', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            --navbar-height: 72px;
+            --navbar-height-compact: 60px;
+        }
+
+        [dir="rtl"] {
+            --font-body: 'Inter', 'SF Pro Display', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            text-align: right;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--milky-white);
+            color: var(--deep-charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            transition: background-color var(--transition-smooth);
+        }
+
+        body.loading-active {
+            overflow: hidden;
+        }
+
+        /* ============ LOADING SCREEN ============ */
+        .loading-screen {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            background: var(--warm-ivory);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            pointer-events: all;
+        }
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .loading-logo-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            animation: logoReveal 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+        }
+        @keyframes logoReveal {
+            0% {
+                opacity: 0;
+                transform: scale(0.92);
+            }
+            40% {
+                opacity: 1;
+                transform: scale(1.03);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .loading-logo-img {
+            width: 168px;
+            height: auto;
+            position: relative;
+            filter: drop-shadow(0 12px 34px rgba(180, 140, 80, 0.28));
+            animation: logoPulse 1.8s ease-in-out infinite;
+        }
+        @keyframes logoPulse {
+            0%,
+            100% {
+                filter: drop-shadow(0 12px 34px rgba(180, 140, 80, 0.22));
+            }
+            50% {
+                filter: drop-shadow(0 16px 44px rgba(180, 140, 80, 0.4));
+            }
+        }
+        .loading-subtle-line {
+            width: 40px;
+            height: 2px;
+            background: var(--champagne-gold);
+            margin-top: 18px;
+            border-radius: 2px;
+            opacity: 0;
+            animation: lineExpand 0.6s 0.7s ease forwards;
+        }
+        @keyframes lineExpand {
+            from {
+                width: 0;
+                opacity: 0;
+            }
+            to {
+                width: 40px;
+                opacity: 0.7;
+            }
+        }
+
+        /* ============ NAVIGATION ============ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(254, 249, 243, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: all var(--transition-smooth);
+            height: var(--navbar-height);
+            display: flex;
+            align-items: center;
+        }
+        .navbar.compact {
+            height: var(--navbar-height-compact);
+            background: rgba(254, 249, 243, 0.94);
+            box-shadow: var(--shadow-warm);
+        }
+        .navbar-inner {
+            width: 100%;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+        .nav-logo-icon {
+            height: 36px;
+            width: auto;
+            display: block;
+            transition: transform var(--transition-fast);
+        }
+        .nav-logo:hover .nav-logo-icon {
+            transform: scale(1.05);
+        }
+        .nav-logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--deep-charcoal);
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--deep-charcoal);
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 8px 14px;
+            border-radius: 8px;
+            transition: all var(--transition-fast);
+            white-space: nowrap;
+            letter-spacing: 0.01em;
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            background: var(--gold-pale);
+            color: var(--muted-gold);
+        }
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+        .nav-icon-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid var(--border-subtle);
+            background: var(--white-pure);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+            color: var(--deep-charcoal);
+            font-size: 1rem;
+            position: relative;
+        }
+        .nav-icon-btn:hover {
+            border-color: var(--champagne-gold);
+            background: var(--gold-pale);
+            color: var(--muted-gold);
+        }
+        .cart-count {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: var(--muted-gold);
+            color: white;
+            font-size: 0.7rem;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            border: 2px solid white;
+        }
+        .lang-selector {
+            position: relative;
+        }
+        .lang-display {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 12px;
+            border-radius: 20px;
+            border: 1px solid var(--border-subtle);
+            background: var(--white-pure);
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--deep-charcoal);
+            transition: all var(--transition-fast);
+            white-space: nowrap;
+        }
+        .lang-display:hover {
+            border-color: var(--champagne-gold);
+            background: var(--gold-pale);
+        }
+        .lang-dropdown {
+            position: absolute;
+            top: 110%;
+            right: 0;
+            background: white;
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            box-shadow: var(--shadow-elevated);
+            list-style: none;
+            min-width: 140px;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-6px);
+            transition: all var(--transition-fast);
+            z-index: 20;
+        }
+        .lang-dropdown.open {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .lang-dropdown li {
+            padding: 10px 18px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            color: var(--deep-charcoal);
+            transition: background var(--transition-fast);
+        }
+        .lang-dropdown li:hover,
+        .lang-dropdown li.active-lang {
+            background: var(--gold-pale);
+            color: var(--muted-gold);
+            font-weight: 500;
+        }
+        .hamburger {
+            display: none;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid var(--border-subtle);
+            background: var(--white-pure);
+            cursor: pointer;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            transition: all var(--transition-fast);
+            z-index: 1001;
+        }
+        .hamburger span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: var(--deep-charcoal);
+            border-radius: 2px;
+            transition: all var(--transition-fast);
+        }
+        .hamburger.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Mobile Menu
+           Structure: the fixed .navbar (logo + EN button + hamburger/X) stays
+           on top at all times (z-index above the panel below), so it doubles
+           as the menu's own fixed header — nothing extra to keep in sync.
+           Below it, .mobile-menu is a full-height column: a scrollable link
+           list that takes whatever space is available, then the cart button
+           pinned at the bottom. Sizing uses dvh/rem so it adapts to any
+           mobile viewport instead of assuming a fixed height. */
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: var(--warm-ivory);
+            display: flex;
+            flex-direction: column;
+            max-height: 100vh;
+            max-height: 100dvh;
+            padding-top: var(--navbar-height);
+            opacity: 0;
+            visibility: hidden;
+            overflow: hidden;
+            transition: opacity 0.35s cubic-bezier(0.25, 0.1, 0.25, 1),
+                        visibility 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+            pointer-events: none;
+        }
+        .mobile-menu.open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+        .mobile-menu-nav {
+            flex: 1 1 auto;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            margin: 0;
+            padding: 8px min(7vw, 28px) 12px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+        }
+        .mobile-menu li {
+            flex-shrink: 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .mobile-menu li:first-child a {
+            padding-top: 16px;
+        }
+        .mobile-menu a {
+            display: block;
+            text-decoration: none;
+            font-size: clamp(0.95rem, 4vw, 1.05rem);
+            line-height: 1.4;
+            color: var(--deep-charcoal);
+            font-weight: 500;
+            padding: 14px 4px;
+            transition: color var(--transition-fast);
+            letter-spacing: 0.02em;
+        }
+        .mobile-menu a:hover,
+        .mobile-menu a:active {
+            color: var(--muted-gold);
+        }
+        .mobile-menu-cart {
+            flex-shrink: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 10px min(7vw, 28px) max(16px, env(safe-area-inset-bottom));
+            padding: 12px 22px;
+            border-radius: 24px;
+            border: 1px solid var(--border-subtle);
+            background: var(--white-pure);
+            color: var(--deep-charcoal);
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        .mobile-menu-cart:hover {
+            border-color: var(--champagne-gold);
+            background: var(--gold-pale);
+            color: var(--muted-gold);
+        }
+        .mobile-menu-cart .cart-count {
+            position: static;
+            border: none;
+        }
+        @media (max-height: 480px) {
+            .mobile-menu a {
+                padding: 10px 4px;
+            }
+            .mobile-menu li:first-child a {
+                padding-top: 10px;
+            }
+        }
+
+        /* ============ MAIN CONTENT ============ */
+        .main-content {
+            padding-top: var(--navbar-height);
+        }
+        section {
+            padding: 60px 28px;
+            max-width: 1320px;
+            margin: 0 auto;
+        }
+        @media (min-width: 768px) {
+            section {
+                padding: 80px 36px;
+            }
+        }
+
+        /* ============ HERO ============ */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            min-height: 88vh;
+            padding-top: calc(var(--navbar-height) + 20px);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(175deg, var(--warm-ivory) 0%, var(--soft-cream) 40%, var(--champagne) 100%);
+        }
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+            width: 100%;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+        @media (min-width: 900px) {
+            .hero-inner {
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+            }
+        }
+        .hero-text {
+            animation: fadeUp 0.9s 0.3s ease forwards;
+            opacity: 0;
+        }
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            background: var(--gold-pale);
+            color: var(--muted-gold);
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 18px;
+            border: 1px solid rgba(200, 165, 110, 0.3);
+        }
+        .hero-heading {
+            font-family: var(--font-heading);
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 700;
+            color: var(--charcoal-dark);
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+            margin-bottom: 16px;
+        }
+        .hero-heading .gold-accent {
+            color: var(--muted-gold);
+        }
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--warm-gray);
+            margin-bottom: 28px;
+            max-width: 460px;
+            line-height: 1.55;
+        }
+        .hero-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 26px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            letter-spacing: 0.02em;
+            border: none;
+            font-family: var(--font-body);
+            white-space: nowrap;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--champagne-gold), var(--muted-gold));
+            color: white;
+            box-shadow: 0 6px 20px rgba(180, 140, 80, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(180, 140, 80, 0.4);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--deep-charcoal);
+            color: var(--deep-charcoal);
+        }
+        .btn-outline:hover {
+            background: var(--deep-charcoal);
+            color: white;
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--deep-charcoal);
+            padding: 12px 20px;
+            font-weight: 500;
+        }
+        .btn-ghost:hover {
+            color: var(--muted-gold);
+        }
+        .hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: floatVisual 5s ease-in-out infinite;
+        }
+        @keyframes floatVisual {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-14px);
+            }
+        }
+        .hero-device-mockup {
+            width: 100%;
+            max-width: 420px;
+            aspect-ratio: 1/1;
+            border-radius: var(--radius-xl);
+            background: linear-gradient(160deg, #FDFAF5 0%, #F5EDDF 50%, #EDE0CD 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-elevated), 0 0 0 1px rgba(200, 165, 110, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-device-mockup::before {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 60%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(200, 165, 110, 0.25) 0%, transparent 70%);
+            top: 20%;
+            left: 20%;
+            animation: glowShift 4s ease-in-out infinite;
+        }
+        @keyframes glowShift {
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.9;
+            }
+        }
+        .hero-device-icon {
+            font-size: 8rem;
+            z-index: 1;
+            filter: drop-shadow(0 8px 20px rgba(60, 40, 20, 0.12));
+            position: relative;
+        }
+        .hero-device-img {
+            width: 62%;
+            height: auto;
+            object-fit: contain;
+            z-index: 1;
+            filter: drop-shadow(0 8px 20px rgba(60, 40, 20, 0.16));
+            position: relative;
+        }
+        .hero-device-label {
+            position: absolute;
+            bottom: 22%;
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            color: var(--muted-gold);
+            letter-spacing: 0.06em;
+            font-weight: 600;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 6px 18px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+        }
+
+        /* ============ SECTION HEADERS ============ */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-tag {
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 16px;
+            background: var(--gold-pale);
+            color: var(--muted-gold);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-bottom: 14px;
+            border: 1px solid rgba(200, 165, 110, 0.25);
+        }
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            color: var(--charcoal-dark);
+            letter-spacing: -0.01em;
+            margin-bottom: 10px;
+        }
+        .section-subtitle {
+            color: var(--warm-gray);
+            font-size: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* ============ CATEGORIES ============ */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            gap: 16px;
+        }
+        @media (min-width: 600px) {
+            .categories-grid {
+                grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+                gap: 20px;
+            }
+        }
+        .category-card {
+            background: var(--white-pure);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 28px 18px;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-smooth);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-elevated);
+            border-color: var(--champagne-gold);
+            background: var(--warm-ivory);
+        }
+        .category-icon {
+            font-size: 2.6rem;
+            transition: transform var(--transition-fast);
+        }
+        .category-card:hover .category-icon {
+            transform: scale(1.1);
+        }
+        .category-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--deep-charcoal);
+        }
+        .category-desc {
+            font-size: 0.78rem;
+            color: var(--warm-gray);
+            line-height: 1.4;
+        }
+
+        /* ============ PRODUCT CARDS ============ */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        @media (min-width: 600px) {
+            .products-grid {
+                gap: 24px;
+            }
+        }
+        .product-card {
+            background: var(--white-pure);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition-smooth);
+            cursor: pointer;
+            position: relative;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-elevated);
+            border-color: var(--champagne-gold);
+        }
+        .product-card-image {
+            aspect-ratio: 1/1;
+            background: linear-gradient(160deg, #FDFAF5, #F5EDDF);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 10%;
+            box-sizing: border-box;
+            display: block;
+        }
+        .product-card-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            padding: 5px 12px;
+            border-radius: 14px;
+            background: var(--gold-pale);
+            color: var(--muted-gold);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            border: 1px solid rgba(200, 165, 110, 0.3);
+        }
+        .product-card-body {
+            padding: 18px;
+        }
+        .product-brand {
+            font-size: 0.75rem;
+            color: var(--warm-gray);
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .product-name {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--deep-charcoal);
+            margin: 4px 0 6px;
+            line-height: 1.3;
+        }
+        .product-spec {
+            font-size: 0.8rem;
+            color: var(--warm-gray);
+            margin-bottom: 8px;
+        }
+        .product-price {
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--charcoal-dark);
+            font-family: var(--font-heading);
+        }
+        .product-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        .btn-sm {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: 1px solid var(--border-subtle);
+            background: var(--white-pure);
+            color: var(--deep-charcoal);
+            transition: all var(--transition-fast);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .btn-sm:hover {
+            border-color: var(--champagne-gold);
+            background: var(--gold-pale);
+            color: var(--muted-gold);
+        }
+        .btn-sm.btn-gold {
+            background: var(--champagne-gold);
+            color: white;
+            border: none;
+            font-weight: 600;
+        }
+        .btn-sm.btn-gold:hover {
+            background: var(--muted-gold);
+        }
+
+        /* ============ TRADE-IN ============ */
+        .tradein-section {
+            background: linear-gradient(180deg, var(--warm-ivory), var(--champagne));
+            border-radius: var(--radius-xl);
+            padding: 50px 28px;
+            margin: 40px 28px;
+            max-width: 1320px;
+        }
+        @media (min-width: 768px) {
+            .tradein-section {
+                padding: 70px 50px;
+                margin: 60px auto;
+            }
+        }
+        .tradein-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        @media (min-width: 768px) {
+            .tradein-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+            }
+        }
+        .tradein-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .tradein-form select,
+        .tradein-form input {
+            padding: 12px 18px;
+            border-radius: 14px;
+            border: 1px solid var(--border-subtle);
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            background: var(--white-pure);
+            color: var(--deep-charcoal);
+            transition: border var(--transition-fast);
+            width: 100%;
+        }
+        .tradein-form select:focus,
+        .tradein-form input:focus {
+            outline: none;
+            border-color: var(--champagne-gold);
+            box-shadow: 0 0 0 3px rgba(200, 165, 110, 0.1);
+        }
+        .tradein-form select.field-error,
+        .tradein-form input.field-error {
+            border-color: var(--error);
+            box-shadow: 0 0 0 3px rgba(196, 106, 94, 0.1);
+        }
+        .tradein-error {
+            font-size: 0.82rem;
+            color: var(--error);
+            background: rgba(196, 106, 94, 0.08);
+            border: 1px solid rgba(196, 106, 94, 0.25);
+            border-radius: 10px;
+            padding: 10px 14px;
+            line-height: 1.4;
+        }
+
+        /* ============ STORE SECTION ============ */
+        .store-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        @media (min-width: 768px) {
+            .store-section {
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+            }
+        }
+        .store-image-placeholder {
+            aspect-ratio: 4/3;
+            border-radius: var(--radius-xl);
+            background: linear-gradient(150deg, #F5EDDF 0%, #EDE0CD 40%, #D4C9B8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-elevated);
+            position: relative;
+            overflow: hidden;
+        }
+        .store-image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .store-info h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--charcoal-dark);
+            margin-bottom: 14px;
+        }
+        .store-detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: var(--deep-charcoal);
+            font-size: 0.95rem;
+        }
+        .store-detail .icon {
+            color: var(--muted-gold);
+            flex-shrink: 0;
+        }
+
+        /* ============ NEWSROOM ============ */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .news-card {
+            background: var(--white-pure);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition-smooth);
+            cursor: pointer;
+        }
+        .news-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-elevated);
+            border-color: var(--champagne-gold);
+        }
+        .news-card-image {
+            aspect-ratio: 16/10;
+            background: linear-gradient(135deg, #FDFAF5, #F0E6D5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            overflow: hidden;
+        }
+        .news-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .news-card-body {
+            padding: 18px;
+        }
+        .news-date {
+            font-size: 0.75rem;
+            color: var(--warm-gray);
+            letter-spacing: 0.03em;
+        }
+        .news-title {
+            font-weight: 600;
+            margin: 6px 0;
+            color: var(--deep-charcoal);
+            line-height: 1.35;
+        }
+
+        /* ============ FOOTER ============ */
+        .footer {
+            background: var(--charcoal-dark);
+            color: #D4C9B8;
+            padding: 50px 28px 30px;
+            margin-top: 40px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 30px;
+            max-width: 1320px;
+            margin: 0 auto;
+        }
+        .footer-col h4 {
+            color: var(--gold-light);
+            font-family: var(--font-heading);
+            margin-bottom: 14px;
+            font-size: 1rem;
+        }
+        .footer-col a,
+        .footer-col p {
+            color: #B8A898;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 8px;
+            transition: color var(--transition-fast);
+            line-height: 1.5;
+        }
+        .footer-col a:hover {
+            color: var(--champagne-gold);
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 24px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(200, 165, 110, 0.2);
+            font-size: 0.8rem;
+            color: #8B7E6A;
+            max-width: 1320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ============ WHATSAPP FLOAT ============ */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 900;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.35);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            border: 3px solid white;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        /* ============ CART SIDEBAR ============ */
+        .cart-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(30, 20, 10, 0.4);
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-smooth);
+            pointer-events: none;
+        }
+        .cart-overlay.open {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+        .cart-sidebar {
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            max-width: 420px;
+            background: var(--warm-ivory);
+            z-index: 2001;
+            transform: translateX(100%);
+            transition: transform var(--transition-smooth);
+            display: flex;
+            flex-direction: column;
+            box-shadow: -8px 0 40px rgba(60, 40, 20, 0.15);
+        }
+        .cart-sidebar.open {
+            transform: translateX(0);
+        }
+        .cart-header {
+            padding: 18px 22px;
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .cart-close {
+            cursor: pointer;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 1px solid var(--border-subtle);
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+        }
+        .cart-close:hover {
+            background: #f5f0e8;
+            border-color: #ccc;
+        }
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .cart-empty {
+            text-align: center;
+            color: var(--warm-gray);
+            padding: 40px 0;
+            font-size: 0.95rem;
+        }
+        .cart-item {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            background: white;
+            padding: 12px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+        }
+        .cart-item-img {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            background: #F5EDDF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+        .cart-item-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 4px;
+            box-sizing: border-box;
+            display: block;
+        }
+        .cart-item-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .cart-item-name {
+            font-weight: 500;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .cart-item-price {
+            font-weight: 600;
+            color: var(--muted-gold);
+            font-size: 0.85rem;
+        }
+        .cart-remove {
+            cursor: pointer;
+            color: #c46a5e;
+            font-size: 0.8rem;
+            background: none;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 6px;
+        }
+        .cart-footer {
+            padding: 16px 22px;
+            border-top: 1px solid var(--border-subtle);
+        }
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+        }
+
+        /* ============ CART ITEM VARIANT / QTY CONTROLS ============ */
+        .cart-item {
+            align-items: flex-start;
+        }
+        .cart-item-variant {
+            font-size: 0.76rem;
+            color: var(--warm-gray);
+            margin: 2px 0 6px;
+            line-height: 1.5;
+        }
+        .cart-item-qty-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 6px;
+        }
+        .qty-control {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid var(--border-subtle);
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--white-pure);
+        }
+        .qty-btn {
+            width: 26px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background: transparent;
+            color: var(--deep-charcoal);
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            line-height: 1;
+        }
+        .qty-btn:hover {
+            background: var(--gold-pale);
+            color: var(--muted-gold);
+        }
+        .qty-value {
+            min-width: 26px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* ============ PRODUCT OPTIONS MODAL ============ */
+        .options-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(30, 20, 10, 0.45);
+            z-index: 3000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .options-modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .options-modal {
+            position: relative;
+            background: var(--warm-ivory);
+            border-radius: var(--radius-lg);
+            max-width: 420px;
+            width: 100%;
+            max-height: 86vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-elevated);
+            transform: translateY(16px) scale(0.98);
+            transition: transform var(--transition-smooth);
+        }
+        .options-modal-overlay.open .options-modal {
+            transform: translateY(0) scale(1);
+        }
+        .options-modal-body {
+            padding: 26px 24px 24px;
+        }
+        .options-modal-header {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+        .options-modal-img {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            background: #F5EDDF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .options-modal-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 6px;
+        }
+        .options-modal-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            line-height: 1.3;
+        }
+        .options-modal-price {
+            font-size: 0.85rem;
+            color: var(--muted-gold);
+            font-weight: 600;
+            margin-top: 2px;
+        }
+        .options-group {
+            margin-bottom: 18px;
+        }
+        .options-group-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--deep-charcoal);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .options-choices {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .option-chip {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            border: 1.5px solid var(--border-subtle);
+            background: var(--white-pure);
+            color: var(--deep-charcoal);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        .option-chip:hover {
+            border-color: var(--champagne-gold);
+        }
+        .option-chip.selected {
+            background: var(--champagne-gold);
+            border-color: var(--champagne-gold);
+            color: white;
+            font-weight: 600;
+        }
+        .options-modal-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 4px;
+        }
+        .options-modal-actions .btn {
+            flex: 1;
+            justify-content: center;
+        }
+
+        /* ============ SCROLL REVEAL ============ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============ RESPONSIVE ============ */
+        /* Header: below 900px, nav links collapse into the hamburger menu.
+           The rules below keep every remaining header element (logo, brand
+           name, language selector, hamburger) inside the viewport at any
+           mobile width by fitting real, tested sizes to the available
+           space instead of just hiding the symptom. */
+        @media (max-width: 899px) {
+            .navbar-inner {
+                padding: 0 16px;
+                gap: 8px;
+            }
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+                flex-shrink: 0;
+            }
+            .nav-logo {
+                gap: 8px;
+                min-width: 0;
+            }
+            .nav-logo-icon {
+                height: 32px;
+                width: auto;
+            }
+            .nav-logo-text {
+                font-size: clamp(0.7rem, 3.6vw, 0.95rem);
+                letter-spacing: 0.01em;
+            }
+            .nav-actions {
+                gap: 6px;
+                flex-shrink: 0;
+            }
+            .lang-display {
+                padding: 6px 10px;
+                gap: 4px;
+                font-size: 0.78rem;
+            }
+            .nav-actions .lang-display span:last-child {
+                display: none;
+            }
+            .lang-dropdown {
+                min-width: 130px;
+            }
+            /* The cart trigger moves out of the fixed header row on mobile
+               (there isn't room next to logo + language + menu) and lives
+               inside the slide-out mobile menu instead — same toggleCart()
+               action, just relocated so nothing gets clipped. */
+            .nav-actions .nav-icon-btn {
+                display: none;
+            }
+            .mobile-menu-cart {
+                display: flex;
+            }
+        }
+        @media (max-width: 360px) {
+            .navbar-inner {
+                padding: 0 12px;
+            }
+            .nav-logo-icon {
+                height: 28px;
+                width: auto;
+            }
+            .lang-display {
+                padding: 5px 8px;
+                font-size: 0.72rem;
+            }
+            .hamburger,
+            .nav-icon-btn {
+                width: 34px;
+                height: 34px;
+            }
+        }
+        @media (max-width: 600px) {
+            .hero-btns {
+                flex-direction: column;
+                width: 100%;
+            }
+            .hero-btns .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .btn {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+            section {
+                padding: 40px 16px;
+            }
+            .tradein-section {
+                margin: 30px 16px;
+                padding: 36px 18px;
+            }
+            .cart-sidebar {
+                max-width: 100%;
+            }
+        }
+
+        /* RTL overrides */
+        [dir="rtl"] .whatsapp-float {
+            right: auto;
+            left: 24px;
+        }
+        [dir="rtl"] .cart-sidebar {
+            right: auto;
+            left: 0;
+            transform: translateX(-100%);
+            box-shadow: 8px 0 40px rgba(60, 40, 20, 0.15);
+        }
+        [dir="rtl"] .cart-sidebar.open {
+            transform: translateX(0);
+        }
+        [dir="rtl"] .product-card-badge {
+            left: auto;
+            right: 12px;
+        }
+        [dir="rtl"] .lang-dropdown {
+            right: auto;
+            left: 0;
+        }
+    </style>
+</head>
+<body class="loading-active">
+
+    <!-- ============ LOADING SCREEN ============ -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo-container">
+            <img src="images/km-logo-full.png" alt="KHPALWAK MOBILES" class="loading-logo-img">
+            <div class="loading-subtle-line"></div>
+        </div>
+    </div>
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="#" class="nav-logo" aria-label="Khpalwak Mobiles Home">
+                <img src="images/km-logo-icon.png" alt="" class="nav-logo-icon">
+                <span class="nav-logo-text" data-translate="brandName">KHPALWAK MOBILES</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" data-translate="navHome" class="active">Home</a></li>
+                <li><a href="#shop" data-translate="navShop">Shop</a></li>
+                <li><a href="#smartphones" data-translate="navSmartphones">Smartphones</a></li>
+                <li><a href="#tablets" data-translate="navTablets">Tablets</a></li>
+                <li><a href="#accessories" data-translate="navAccessories">Accessories</a></li>
+                <li><a href="#tradein" data-translate="navTradeIn">Trade-In</a></li>
+                <li><a href="#newsroom" data-translate="navNewsroom">Newsroom</a></li>
+                <li><a href="#store" data-translate="navStore">Store</a></li>
+                <li><a href="#contact" data-translate="navContact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="lang-selector">
+                    <div class="lang-display" id="langDisplay" onclick="toggleLangDropdown()">
+                        🌐 <span id="currentLangLabel">EN</span> <span style="font-size:0.7rem;">▾</span>
+                    </div>
+                    <ul class="lang-dropdown" id="langDropdown">
+                        <li data-lang="en" class="active-lang" onclick="switchLanguage('en')">🇬🇧 English</li>
+                        <li data-lang="fa" onclick="switchLanguage('fa')">🇦🇫 دری</li>
+                        <li data-lang="ps" onclick="switchLanguage('ps')">🇦🇫 پښتو</li>
+                    </ul>
+                </div>
+                <button class="nav-icon-btn" onclick="toggleCart()" aria-label="Cart">
+                    🛒<span class="cart-count" id="cartCountBadge">0</span>
+                </button>
+                <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-nav">
+            <li><a href="#home" data-translate="navHome" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="#shop" data-translate="navShop" onclick="closeMobileMenu()">Shop</a></li>
+            <li><a href="#smartphones" data-translate="navSmartphones" onclick="closeMobileMenu()">Smartphones</a></li>
+            <li><a href="#tablets" data-translate="navTablets" onclick="closeMobileMenu()">Tablets</a></li>
+            <li><a href="#accessories" data-translate="navAccessories" onclick="closeMobileMenu()">Accessories</a></li>
+            <li><a href="#tradein" data-translate="navTradeIn" onclick="closeMobileMenu()">Trade-In</a></li>
+            <li><a href="#newsroom" data-translate="navNewsroom" onclick="closeMobileMenu()">Newsroom</a></li>
+            <li><a href="#store" data-translate="navStore" onclick="closeMobileMenu()">Store</a></li>
+            <li><a href="#contact" data-translate="navContact" onclick="closeMobileMenu()">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-cart" onclick="closeMobileMenu(); toggleCart();" aria-label="Cart">
+            🛒 <span data-translate="navCart">Cart</span><span class="cart-count" id="cartCountBadgeMobile">0</span>
+        </button>
+    </div>
+
+    <!-- ============ CART OVERLAY & SIDEBAR ============ -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <span data-translate="cartTitle">🛒 Shopping Cart</span>
+            <button class="cart-close" onclick="toggleCart()">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty" data-translate="cartEmpty">Your cart is empty.</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total"><span data-translate="cartTotal">Total</span>: <span id="cartTotal">0 AFN</span></div>
+            <button class="btn btn-primary" id="orderWhatsAppBtn" style="width:100%;justify-content:center;background:linear-gradient(135deg,#25D366,#1DA851);box-shadow:0 6px 20px rgba(37,211,102,0.3);" onclick="orderViaWhatsApp()">
+                <span>💬</span><span data-translate="orderViaWhatsApp">Order via WhatsApp</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ============ PRODUCT OPTIONS MODAL ============ -->
+    <div class="options-modal-overlay" id="optionsModalOverlay" onclick="closeOptionsModal(event)">
+        <div class="options-modal" id="optionsModal" onclick="event.stopPropagation()">
+            <button class="cart-close" id="optionsModalClose" onclick="closeOptionsModal()" style="position:absolute;top:16px;right:16px;">✕</button>
+            <div class="options-modal-body" id="optionsModalBody"></div>
+        </div>
+    </div>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <div class="main-content" id="mainContent">
+
+        <!-- HERO -->
+        <section class="hero-section" id="home">
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <span class="hero-badge" data-translate="heroBadge">✦ PREMIUM TECHNOLOGY RETAIL</span>
+                    <h1 class="hero-heading">
+                        <span data-translate="heroLine1">Premium Technology.</span><br>
+                        <span class="gold-accent" data-translate="heroLine2">Made for Your World.</span>
+                    </h1>
+                    <p class="hero-subtitle" data-translate="heroSubtitle">Authentic smartphones, tablets, wearables, and accessories with trusted expert guidance, nationwide delivery, and dedicated after-sales support across Afghanistan.</p>
+                    <div class="hero-btns">
+                        <a href="#shop" class="btn btn-primary" data-translate="heroCTA1">Shop Products</a>
+                        <a href="#store" class="btn btn-outline" data-translate="heroCTA2">Visit Our Store</a>
+                        <a href="#contact" class="btn btn-ghost" data-translate="heroCTA3">Contact Us →</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-device-mockup">
+                        <img src="images/hero-flagship-device.png" alt="KHPALWAK MOBILES premium smartphone" class="hero-device-img">
+                        <span class="hero-device-label">KHPALWAK MOBILES</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORIES -->
+        <section id="shop">
+            <div class="section-header reveal">
+                <span class="section-tag" data-translate="catTag">EXPLORE</span>
+                <h2 class="section-title" data-translate="catTitle">Product Categories</h2>
+                <p class="section-subtitle" data-translate="catSubtitle">Discover our full range of premium technology products, curated for quality and authenticity.</p>
+            </div>
+            <div class="categories-grid reveal">
+                <a href="#smartphones" class="category-card"><span class="category-icon">📱</span><span class="category-name" data-translate="catSmartphones">Smartphones</span><span class="category-desc">Apple, Samsung & more</span></a>
+                <a href="#tablets" class="category-card"><span class="category-icon">📋</span><span class="category-name" data-translate="catTablets">Tablets</span><span class="category-desc">iPad, Galaxy Tab</span></a>
+                <a href="#wearables" class="category-card"><span class="category-icon">⌚</span><span class="category-name" data-translate="catWearables">Wearables</span><span class="category-desc">Apple Watch, Galaxy Watch</span></a>
+                <a href="#audio" class="category-card"><span class="category-icon">🎧</span><span class="category-name" data-translate="catAudio">Audio</span><span class="category-desc">AirPods, JBL & more</span></a>
+                <a href="#accessories" class="category-card"><span class="category-icon">🔌</span><span class="category-name" data-translate="catAccessories">Accessories</span><span class="category-desc">Chargers, cases, cables</span></a>
+                <a href="#power" class="category-card"><span class="category-icon">🔋</span><span class="category-name" data-translate="catPower">Power</span><span class="category-desc">Power banks & adapters</span></a>
+            </div>
+        </section>
+
+        <!-- PRODUCT SHOWCASE -->
+        <section id="smartphones">
+            <div class="section-header reveal">
+                <span class="section-tag" data-translate="prodTag">FEATURED</span>
+                <h2 class="section-title" data-translate="prodTitle">Latest Smartphones</h2>
+                <p class="section-subtitle" data-translate="prodSubtitle">Authentic devices with manufacturer warranty. Prices displayed are indicative — contact us for current pricing and availability.</p>
+            </div>
+            <div class="products-grid reveal" id="productsGrid">
+                <!-- Products rendered by JS -->
+            </div>
+        </section>
+
+        <!-- TRADE-IN -->
+        <section class="tradein-section reveal" id="tradein">
+            <div class="tradein-grid">
+                <div>
+                    <span class="section-tag" data-translate="tradeTag">TRADE-IN</span>
+                    <h2 class="section-title" style="text-align:left;" data-translate="tradeTitle">Trade In Your Device</h2>
+                    <p style="color:var(--warm-gray);margin-bottom:18px;line-height:1.5;" data-translate="tradeDesc">Get value for your current device toward an upgrade. Fill in the details below to request an appraisal. Final value determined after in-store evaluation.</p>
+                    <div class="tradein-form">
+                        <select id="tradeDeviceType" data-translate-attr="placeholder" data-translate="tradeDevice" aria-label="Select device type">
+                            <option value="" data-translate="tradeSelectDevice">Select device type...</option>
+                            <option value="Smartphone" data-translate="tradeTypeSmartphone">Smartphone</option><option value="Tablet" data-translate="tradeTypeTablet">Tablet</option><option value="Laptop" data-translate="tradeTypeLaptop">Laptop</option><option value="Other" data-translate="tradeTypeOther">Other</option>
+                        </select>
+                        <input type="text" id="tradeDeviceModel" data-translate-attr="placeholder" data-translate="tradeModel" placeholder="Enter model (e.g., iPhone 14 Pro)" aria-label="Device model">
+                        <select id="tradeCondition" data-translate-attr="placeholder" aria-label="Condition">
+                            <option value="" data-translate="tradeSelectCondition">Select condition...</option>
+                            <option value="Like New" data-translate="tradeCondLikeNew">Like New</option><option value="Good" data-translate="tradeCondGood">Good</option><option value="Fair" data-translate="tradeCondFair">Fair</option><option value="Needs Repair" data-translate="tradeCondNeedsRepair">Needs Repair</option>
+                        </select>
+                        <div class="tradein-error" id="tradeInError" style="display:none;"></div>
+                        <button type="button" class="btn btn-primary" style="width:100%;justify-content:center;" data-translate="tradeSubmit" onclick="requestTradeInAppraisal()">Request Appraisal</button>
+                    </div>
+                </div>
+                <div style="text-align:center;font-size:7rem;">🔄</div>
+            </div>
+        </section>
+
+        <!-- WHY KHPALWAK -->
+        <section>
+            <div class="section-header reveal">
+                <span class="section-tag" data-translate="whyTag">WHY KHPALWAK</span>
+                <h2 class="section-title" data-translate="whyTitle">The Khpalwak Difference</h2>
+                <p class="section-subtitle" data-translate="whySubtitle">Trusted by customers across Afghanistan for authentic products and exceptional service.</p>
+            </div>
+            <div class="categories-grid reveal" style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+                <div class="category-card"><span class="category-icon">✅</span><span class="category-name" data-translate="why1">Authentic Products</span><span class="category-desc">100% genuine, verified devices</span></div>
+                <div class="category-card"><span class="category-icon">🛡️</span><span class="category-name" data-translate="why2">Manufacturer Warranty</span><span class="category-desc">Official warranty coverage</span></div>
+                <div class="category-card"><span class="category-icon">🎯</span><span class="category-name" data-translate="why3">Expert Guidance</span><span class="category-desc">Knowledgeable consultation</span></div>
+                <div class="category-card"><span class="category-icon">🚚</span><span class="category-name" data-translate="why4">Fast Delivery</span><span class="category-desc">Same-day Kabul, nationwide</span></div>
+                <div class="category-card"><span class="category-icon">💳</span><span class="category-name" data-translate="why5">Flexible Payment</span><span class="category-desc">Cash, transfer & installments</span></div>
+                <div class="category-card"><span class="category-icon">🤝</span><span class="category-name" data-translate="why6">After-Sales Support</span><span class="category-desc">Ongoing customer care</span></div>
+            </div>
+        </section>
+
+        <!-- STORE -->
+        <section id="store">
+            <div class="section-header reveal">
+                <span class="section-tag" data-translate="storeTag">VISIT US</span>
+                <h2 class="section-title" data-translate="storeTitle">Our Store</h2>
+                <p class="section-subtitle" data-translate="storeSubtitle">Experience our products firsthand at our premium retail location.</p>
+            </div>
+            <div class="store-section reveal">
+                <div class="store-image-placeholder"><img src="images/khpalwak-store-front.png" alt="KHPALWAK MOBILES retail storefront" loading="lazy"></div>
+                <div class="store-info">
+                    <h3 data-translate="storeName">KHPALWAK MOBILES</h3>
+                    <div class="store-detail"><span class="icon">📍</span><span data-translate="storeAddress">Shahr-e-Now, Ansari Square, opposite Kabul City Center &amp; Park Mall, Kabul, Afghanistan</span></div>
+                    <div class="store-detail"><span class="icon">🕐</span><span data-translate="storeHours">Opening Hours: Sat–Thu, 9:00 AM – 7:00 PM</span></div>
+                    <div class="store-detail"><span class="icon">📞</span><span data-translate="storePhone">Phone: Available via WhatsApp &amp; direct contact</span></div>
+                    <div class="store-detail"><span class="icon">💬</span><a href="https://wa.me/93700886988" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;" data-translate="storeWhatsApp">WhatsApp: Chat with our team</a></div>
+                    <a href="https://www.google.com/maps/dir/?api=1&amp;destination=34.5335732,69.1718729&amp;destination_place_id=ChIJy6lUvb9v0TgRonPfTFxfPRc" class="btn btn-outline" style="margin-top:14px;" target="_blank" rel="noopener" data-translate="storeDirections">Get Directions</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSROOM -->
+        <section id="newsroom">
+            <div class="section-header reveal">
+                <span class="section-tag" data-translate="newsTag">NEWSROOM</span>
+                <h2 class="section-title" data-translate="newsTitle">Latest from Khpalwak</h2>
+                <p class="section-subtitle" data-translate="newsSubtitle">Product announcements, new arrivals, and technology updates.</p>
+            </div>
+            <div class="news-grid reveal" id="newsGrid">
+                <!-- News rendered by JS -->
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="section-header reveal">
+                <span class="section-tag" data-translate="contactTag">GET IN TOUCH</span>
+                <h2 class="section-title" data-translate="contactTitle">Contact Us</h2>
+                <p class="section-subtitle" data-translate="contactSubtitle">We're here to help — reach out via WhatsApp, phone, or visit our store.</p>
+            </div>
+            <div style="text-align:center;max-width:500px;margin:0 auto;" class="reveal">
+                <a href="https://wa.me/93700886988" class="btn btn-primary" style="margin:8px;justify-content:center;" target="_blank" rel="noopener" data-translate="contactWhatsApp">💬 WhatsApp Chat</a>
+                <a href="mailto:info@khpalwakmobiles.com" class="btn btn-outline" style="margin:8px;justify-content:center;" data-translate="contactEmail">✉️ Send Email</a>
+                <p style="margin-top:16px;color:var(--warm-gray);font-size:0.9rem;" data-translate="contactSocial">Follow us on social media for the latest updates and promotions.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>KHPALWAK MOBILES</h4>
+                <p data-translate="footerDesc">Afghanistan's premium destination for authentic mobile technology, expert guidance, and trusted after-sales support.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-translate="footerShop">Shop</h4>
+                <a href="#smartphones" data-translate="catSmartphones">Smartphones</a>
+                <a href="#tablets" data-translate="catTablets">Tablets</a>
+                <a href="#accessories" data-translate="catAccessories">Accessories</a>
+                <a href="#audio" data-translate="catAudio">Audio</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-translate="footerServices">Services</h4>
+                <a href="#tradein" data-translate="navTradeIn">Trade-In</a>
+                <a href="#" data-translate="footerDelivery">Delivery</a>
+                <a href="#" data-translate="footerWarranty">Warranty</a>
+                <a href="#contact" data-translate="navContact">Support</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-translate="footerConnect">Connect</h4>
+                <a href="https://wa.me/93700886988" target="_blank" rel="noopener">WhatsApp</a>
+                <a href="#" target="_blank" rel="noopener">Telegram</a>
+                <a href="#" target="_blank" rel="noopener">Facebook</a>
+                <a href="#" target="_blank" rel="noopener">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="currentYear"></span> KHPALWAK MOBILES. <span data-translate="footerRights">All rights reserved. Premium Mobile & Technology Retail — Afghanistan.</span></p>
+        </div>
+    </footer>
+
+    <!-- ============ WHATSAPP FLOAT ============ -->
+    <a href="https://wa.me/93700886988" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">💬</a>
+
+    <script>
+        // ============ DATA ============
+        const translations = {
+            en: {
+                brandName: 'KHPALWAK MOBILES',
+                navHome: 'Home',
+                navShop: 'Shop',
+                navSmartphones: 'Smartphones',
+                navTablets: 'Tablets',
+                navAccessories: 'Accessories',
+                navTradeIn: 'Trade-In',
+                navNewsroom: 'Newsroom',
+                navStore: 'Store',
+                navContact: 'Contact',
+                navCart: 'Cart',
+                heroBadge: '✦ PREMIUM TECHNOLOGY RETAIL',
+                heroLine1: 'Premium Technology.',
+                heroLine2: 'Made for Your World.',
+                heroSubtitle: 'Authentic smartphones, tablets, wearables, and accessories with trusted expert guidance, nationwide delivery, and dedicated after-sales support across Afghanistan.',
+                heroCTA1: 'Shop Products',
+                heroCTA2: 'Visit Our Store',
+                heroCTA3: 'Contact Us →',
+                catTag: 'EXPLORE',
+                catTitle: 'Product Categories',
+                catSubtitle: 'Discover our full range of premium technology products, curated for quality and authenticity.',
+                catSmartphones: 'Smartphones',
+                catTablets: 'Tablets',
+                catWearables: 'Wearables',
+                catAudio: 'Audio',
+                catAccessories: 'Accessories',
+                catPower: 'Power',
+                prodTag: 'FEATURED',
+                prodTitle: 'Latest Smartphones',
+                prodSubtitle: 'Authentic devices with manufacturer warranty. Prices displayed are indicative — contact us for current pricing and availability.',
+                tradeTag: 'TRADE-IN',
+                tradeTitle: 'Trade In Your Device',
+                tradeDesc: 'Get value for your current device toward an upgrade. Fill in the details below to request an appraisal. Final value determined after in-store evaluation.',
+                tradeSelectDevice: 'Select device type...',
+                tradeDevice: 'Device Type',
+                tradeModel: 'Enter model (e.g., iPhone 14 Pro)',
+                tradeSelectCondition: 'Select condition...',
+                tradeSubmit: 'Request Appraisal',
+                tradeTypeSmartphone: 'Smartphone',
+                tradeTypeTablet: 'Tablet',
+                tradeTypeLaptop: 'Laptop',
+                tradeTypeOther: 'Other',
+                tradeCondLikeNew: 'Like New',
+                tradeCondGood: 'Good',
+                tradeCondFair: 'Fair',
+                tradeCondNeedsRepair: 'Needs Repair',
+                tradeErrorDeviceType: 'Please select your device type.',
+                tradeErrorModel: 'Please enter your device model or name.',
+                tradeErrorCondition: 'Please select the device condition.',
+                whyTag: 'WHY KHPALWAK',
+                whyTitle: 'The Khpalwak Difference',
+                whySubtitle: 'Trusted by customers across Afghanistan for authentic products and exceptional service.',
+                why1: 'Authentic Products',
+                why2: 'Manufacturer Warranty',
+                why3: 'Expert Guidance',
+                why4: 'Fast Delivery',
+                why5: 'Flexible Payment',
+                why6: 'After-Sales Support',
+                storeTag: 'VISIT US',
+                storeTitle: 'Our Store',
+                storeSubtitle: 'Experience our products firsthand at our premium retail location.',
+                storeName: 'KHPALWAK MOBILES',
+                storeAddress: 'Shahr-e-Now, Ansari Square, opposite Kabul City Center & Park Mall, Kabul, Afghanistan',
+                storeHours: 'Opening Hours: Sat–Thu, 9:00 AM – 7:00 PM',
+                storePhone: 'Phone: Available via WhatsApp & direct contact',
+                storeWhatsApp: 'WhatsApp: Chat with our team',
+                storeDirections: 'Get Directions',
+                newsTag: 'NEWSROOM',
+                newsTitle: 'Latest from Khpalwak',
+                newsSubtitle: 'Product announcements, new arrivals, and technology updates.',
+                contactTag: 'GET IN TOUCH',
+                contactTitle: 'Contact Us',
+                contactSubtitle: 'We\'re here to help — reach out via WhatsApp, phone, or visit our store.',
+                contactWhatsApp: '💬 WhatsApp Chat',
+                contactEmail: '✉️ Send Email',
+                contactSocial: 'Follow us on social media for the latest updates and promotions.',
+                footerDesc: 'Afghanistan\'s premium destination for authentic mobile technology, expert guidance, and trusted after-sales support.',
+                footerShop: 'Shop',
+                footerServices: 'Services',
+                footerConnect: 'Connect',
+                footerDelivery: 'Delivery',
+                footerWarranty: 'Warranty',
+                footerRights: 'All rights reserved. Premium Mobile & Technology Retail — Afghanistan.',
+                cartTitle: '🛒 Shopping Cart',
+                cartEmpty: 'Your cart is empty.',
+                cartTotal: 'Total',
+                checkoutBtn: 'Proceed to Checkout',
+                addToCart: 'Add to Cart',
+                buyNow: 'Buy Now',
+                whatsappInquiry: 'WhatsApp Inquiry',
+                quickView: 'Quick View',
+                availability: 'Availability',
+                inStock: 'In Stock',
+                orderViaWhatsApp: 'Order via WhatsApp',
+                selectOptions: 'Select Options',
+                storageLabel: 'Storage / RAM',
+                colorLabel: 'Color',
+                addedToCart: 'Added to cart',
+                cartEmptyAlert: 'Your cart is empty. Please add at least one product before ordering.',
+                itemsCount: 'items',
+                confirmAdd: 'Add to Cart',
+                cancelBtn: 'Cancel',
+            },
+            fa: {
+                brandName: 'خپلواک موبایل',
+                navHome: 'خانه',
+                navShop: 'فروشگاه',
+                navSmartphones: 'گوشی‌های هوشمند',
+                navTablets: 'تبلت‌ها',
+                navAccessories: 'لوازم جانبی',
+                navTradeIn: 'تعویض دستگاه',
+                navNewsroom: 'اخبار',
+                navStore: 'فروشگاه',
+                navContact: 'تماس',
+                navCart: 'سبد خرید',
+                heroBadge: '✦ فروشگاه برتر فناوری',
+                heroLine1: 'فناوری برتر.',
+                heroLine2: 'ساخته شده برای دنیای شما.',
+                heroSubtitle: 'گوشی‌های هوشمند، تبلت‌ها، لوازم پوشیدنی و لوازم جانبی اصلی با راهنمایی تخصصی معتبر، ارسال سراسری و پشتیبانی پس از فروش در سراسر افغانستان.',
+                heroCTA1: 'مشاهده محصولات',
+                heroCTA2: 'بازدید از فروشگاه',
+                heroCTA3: 'تماس با ما ←',
+                catTag: 'کاوش',
+                catTitle: 'دسته‌بندی محصولات',
+                catSubtitle: 'طیف کامل محصولات فناوری برتر ما را کشف کنید.',
+                catSmartphones: 'گوشی‌های هوشمند',
+                catTablets: 'تبلت‌ها',
+                catWearables: 'پوشیدنی‌ها',
+                catAudio: 'صوتی',
+                catAccessories: 'لوازم جانبی',
+                catPower: 'قدرت',
+                prodTag: 'برجسته',
+                prodTitle: 'جدیدترین گوشی‌ها',
+                prodSubtitle: 'دستگاه‌های اصلی با گارانتی. قیمت‌ها نشان‌دهنده هستند — برای قیمت دقیق تماس بگیرید.',
+                tradeTag: 'تعویض',
+                tradeTitle: 'دستگاه خود را تعویض کنید',
+                tradeDesc: 'ارزش دستگاه فعلی خود را برای ارتقا دریافت کنید. جزئیات را پر کنید. ارزش نهایی پس از ارزیابی تعیین می‌شود.',
+                tradeSelectDevice: 'نوع دستگاه را انتخاب کنید...',
+                tradeDevice: 'نوع دستگاه',
+                tradeModel: 'مدل را وارد کنید (مثلاً iPhone 14 Pro)',
+                tradeSelectCondition: 'وضعیت را انتخاب کنید...',
+                tradeSubmit: 'درخواست ارزیابی',
+                tradeTypeSmartphone: 'گوشی هوشمند',
+                tradeTypeTablet: 'تبلت',
+                tradeTypeLaptop: 'لپ‌تاپ',
+                tradeTypeOther: 'دیگر',
+                tradeCondLikeNew: 'مانند نو',
+                tradeCondGood: 'خوب',
+                tradeCondFair: 'متوسط',
+                tradeCondNeedsRepair: 'نیاز به تعمیر',
+                tradeErrorDeviceType: 'لطفاً نوع دستگاه خود را انتخاب کنید.',
+                tradeErrorModel: 'لطفاً مدل یا نام دستگاه خود را وارد کنید.',
+                tradeErrorCondition: 'لطفاً وضعیت دستگاه را انتخاب کنید.',
+                whyTag: 'چرا خپلواک',
+                whyTitle: 'تفاوت خپلواک',
+                whySubtitle: 'مورد اعتماد مشتریان در سراسر افغانستان برای محصولات اصلی و خدمات استثنایی.',
+                why1: 'محصولات اصلی',
+                why2: 'گارانتی سازنده',
+                why3: 'راهنمایی تخصصی',
+                why4: 'ارسال سریع',
+                why5: 'پرداخت انعطاف‌پذیر',
+                why6: 'پشتیبانی پس از فروش',
+                storeTag: 'بازدید',
+                storeTitle: 'فروشگاه ما',
+                storeSubtitle: 'محصولات ما را از نزدیک تجربه کنید.',
+                storeName: 'خپلواک موبایل',
+                storeAddress: 'شهر نو، چوک انصاری، مقابل کابل سیتی سنتر و پارک مال، کابل، افغانستان',
+                storeHours: 'ساعات کاری: شنبه تا پنج‌شنبه، ۹ صبح تا ۷ عصر',
+                storePhone: 'تلفن: از طریق واتساپ و تماس مستقیم',
+                storeWhatsApp: 'واتساپ: با تیم ما گفتگو کنید',
+                storeDirections: 'دریافت مسیر',
+                newsTag: 'اخبار',
+                newsTitle: 'آخرین اخبار خپلواک',
+                newsSubtitle: 'اطلاعیه‌های محصولات، ورودی‌های جدید و به‌روزرسانی‌های فناوری.',
+                contactTag: 'تماس',
+                contactTitle: 'با ما تماس بگیرید',
+                contactSubtitle: 'ما اینجاییم تا کمک کنیم — از طریق واتساپ، تلفن یا بازدید از فروشگاه.',
+                contactWhatsApp: '💬 گفتگوی واتساپ',
+                contactEmail: '✉️ ارسال ایمیل',
+                contactSocial: 'ما را در شبکه‌های اجتماعی دنبال کنید.',
+                footerDesc: 'مقصد برتر افغانستان برای فناوری موبایل اصلی، راهنمایی تخصصی و پشتیبانی معتبر.',
+                footerShop: 'فروشگاه',
+                footerServices: 'خدمات',
+                footerConnect: 'ارتباط',
+                footerDelivery: 'ارسال',
+                footerWarranty: 'گارانتی',
+                footerRights: 'تمامی حقوق محفوظ است. فروشگاه برتر موبایل و فناوری — افغانستان.',
+                cartTitle: '🛒 سبد خرید',
+                cartEmpty: 'سبد خرید شما خالی است.',
+                cartTotal: 'مجموع',
+                checkoutBtn: 'ادامه به پرداخت',
+                addToCart: 'افزودن به سبد',
+                buyNow: 'خرید',
+                whatsappInquiry: 'استعلام واتساپ',
+                quickView: 'نمایش سریع',
+                availability: 'موجودی',
+                inStock: 'موجود',
+                orderViaWhatsApp: 'سفارش از طریق واتساپ',
+                selectOptions: 'انتخاب مشخصات',
+                storageLabel: 'حافظه / رم',
+                colorLabel: 'رنگ',
+                addedToCart: 'به سبد اضافه شد',
+                cartEmptyAlert: 'سبد خرید شما خالی است. لطفاً حداقل یک محصول اضافه کنید.',
+                itemsCount: 'محصول',
+                confirmAdd: 'افزودن به سبد',
+                cancelBtn: 'لغو',
+            },
+            ps: {
+                brandName: 'خپلواک موبایل',
+                navHome: 'کور',
+                navShop: 'پلورنځی',
+                navSmartphones: 'سمارټفونونه',
+                navTablets: 'ټابلیټونه',
+                navAccessories: 'لوازم',
+                navTradeIn: 'د وسیلې تبادله',
+                navNewsroom: 'خبرونه',
+                navStore: 'پلورنځی',
+                navContact: 'اړیکه',
+                navCart: 'ټوکرۍ',
+                heroBadge: '✦ غوره ټیکنالوژۍ پرچون',
+                heroLine1: 'غوره ټیکنالوژي.',
+                heroLine2: 'ستاسو نړۍ لپاره جوړه شوې.',
+                heroSubtitle: 'اصلي سمارټفونونه، ټابلیټونه، اغوستلو وړ وسایل او لوازم په افغانستان کې د باوري متخصص لارښوونې سره.',
+                heroCTA1: 'محصولات وګورئ',
+                heroCTA2: 'زموږ پلورنځی وګورئ',
+                heroCTA3: 'اړیکه ونیسئ ←',
+                catTag: 'سپړنه',
+                catTitle: 'د محصولاتو کټګورۍ',
+                catSubtitle: 'زموږ د غوره ټیکنالوژۍ محصولاتو بشپړه لړۍ ومومئ.',
+                catSmartphones: 'سمارټفونونه',
+                catTablets: 'ټابلیټونه',
+                catWearables: 'اغوستلو وړ',
+                catAudio: 'آډیو',
+                catAccessories: 'لوازم',
+                catPower: 'برېښنا',
+                prodTag: 'ځانګړي',
+                prodTitle: 'وروستي سمارټفونونه',
+                prodSubtitle: 'اصلي وسایل د جوړونکي تضمین سره. نرخونه ښودل شوي — د اوسني نرخ لپاره اړیکه ونیسئ.',
+                tradeTag: 'تبادله',
+                tradeTitle: 'خپله وسیله تبادله کړئ',
+                tradeDesc: 'د خپل اوسني وسیلې ارزښت د نوي لپاره ترلاسه کړئ. توضیحات ډک کړئ.',
+                tradeSelectDevice: 'د وسیلې ډول وټاکئ...',
+                tradeDevice: 'د وسیلې ډول',
+                tradeModel: 'ماډل دننه کړئ (د مثال iPhone 14 Pro)',
+                tradeSelectCondition: 'حالت وټاکئ...',
+                tradeSubmit: 'د ارزونې غوښتنه',
+                tradeTypeSmartphone: 'سمارټ فون',
+                tradeTypeTablet: 'ټابلېټ',
+                tradeTypeLaptop: 'لپ‌ټاپ',
+                tradeTypeOther: 'نور',
+                tradeCondLikeNew: 'لکه نوی',
+                tradeCondGood: 'ښه',
+                tradeCondFair: 'منځنی',
+                tradeCondNeedsRepair: 'ترمیم ته اړتیا لري',
+                tradeErrorDeviceType: 'مهرباني وکړئ د خپلې وسیلې ډول وټاکئ.',
+                tradeErrorModel: 'مهرباني وکړئ د خپلې وسیلې ماډل یا نوم دننه کړئ.',
+                tradeErrorCondition: 'مهرباني وکړئ د وسیلې حالت وټاکئ.',
+                whyTag: 'ولې خپلواک',
+                whyTitle: 'د خپلواک توپیر',
+                whySubtitle: 'په ټول افغانستان کې د اصلي محصولاتو او غوره خدمت لپاره باوري.',
+                why1: 'اصلي محصولات',
+                why2: 'د جوړونکي تضمین',
+                why3: 'متخصص لارښوونه',
+                why4: 'ګړندی تحویل',
+                why5: 'انعطاف وړ تادیه',
+                why6: 'له پلور وروسته ملاتړ',
+                storeTag: 'لیدنه',
+                storeTitle: 'زموږ پلورنځی',
+                storeSubtitle: 'زموږ محصولات له نږدې تجربه کړئ.',
+                storeName: 'خپلواک موبایل',
+                storeAddress: 'شار نو، انصاري چوک، د کابل سیټي سنټر او پارک مال مخې ته، کابل، افغانستان',
+                storeHours: 'د کار ساعتونه: شنبه–پنجشنبه، ۹ سهار – ۷ ماښام',
+                storePhone: 'تلیفون: د وټساپ او مستقیم تماس له لارې',
+                storeWhatsApp: 'وټساپ: زموږ ټیم سره خبرې وکړئ',
+                storeDirections: 'لارښوونه ترلاسه کړئ',
+                newsTag: 'خبرونه',
+                newsTitle: 'د خپلواک وروستي',
+                newsSubtitle: 'د محصول اعلانونه، نوي راغلي او ټیکنالوژۍ تازه معلومات.',
+                contactTag: 'اړیکه',
+                contactTitle: 'موږ سره اړیکه ونیسئ',
+                contactSubtitle: 'موږ دلته یو چې مرسته وکړو — د وټساپ، تلیفون یا زموږ پلورنځي له لارې.',
+                contactWhatsApp: '💬 وټساپ خبرې',
+                contactEmail: '✉️ برېښنالیک',
+                contactSocial: 'په ټولنیزو رسنیو کې موږ تعقیب کړئ.',
+                footerDesc: 'د اصلي موبایل ټیکنالوژۍ لپاره د افغانستان غوره ځای.',
+                footerShop: 'پلورنځی',
+                footerServices: 'خدمتونه',
+                footerConnect: 'اړیکه',
+                footerDelivery: 'تحویل',
+                footerWarranty: 'تضمین',
+                footerRights: 'ټول حقونه خوندي دي. غوره موبایل او ټیکنالوژۍ پرچون — افغانستان.',
+                cartTitle: '🛒 د پیرود ټوکرۍ',
+                cartEmpty: 'ستاسو ټوکرۍ خالي ده.',
+                cartTotal: 'ټولټال',
+                checkoutBtn: 'پرداخت ته دوام',
+                addToCart: 'ټوکرۍ ته',
+                buyNow: 'اوس یې واخلئ',
+                whatsappInquiry: 'وټساپ پوښتنه',
+                quickView: 'چټک کتنه',
+                availability: 'شتون',
+                inStock: 'شته',
+                orderViaWhatsApp: 'د واټساپ له لارې فرمایش',
+                selectOptions: 'ځانګړتیاوې وټاکئ',
+                storageLabel: 'ذخیره / رم',
+                colorLabel: 'رنګ',
+                addedToCart: 'ټوکرۍ ته اضافه شو',
+                cartEmptyAlert: 'ستاسو ټوکرۍ خالي ده. مهرباني وکړئ لومړی لږترلږه یو محصول اضافه کړئ.',
+                itemsCount: 'توکي',
+                confirmAdd: 'ټوکرۍ ته اضافه کړئ',
+                cancelBtn: 'لغوه کول',
+            },
+        };
+
+        let currentLang = 'en';
+        let cart = [];
+        const products = [
+            { id: 1, brand: 'Apple', name: 'iPhone 15 Pro Max',
+                spec: 'A17 Pro · 256GB · Titanium', price: 'Contact for price', icon: '📱', image: 'images/iphone-15-pro-max.png',
+                badge: 'New Arrival', category: 'smartphones', inStock: true,
+                storageOptions: ['128GB', '256GB', '512GB', '1TB'], colorOptions: ['Natural Titanium', 'Blue Titanium', 'White Titanium', 'Black Titanium'] },
+            { id: 2, brand: 'Samsung', name: 'Galaxy S24 Ultra', spec: 'Snapdragon 8 Gen 3 · 512GB',
+                price: 'Contact for price', icon: '📱', image: 'images/galaxy-s24-ultra.png', badge: 'Premium', category: 'smartphones',
+                inStock: true,
+                storageOptions: ['256GB', '512GB', '1TB'], colorOptions: ['Titanium Black', 'Titanium Gray', 'Titanium Violet', 'Titanium Yellow'] },
+            { id: 3, brand: 'Apple', name: 'iPad Pro M4', spec: 'M4 Chip · 13" · 256GB',
+                price: 'Contact for price', icon: '📋', image: 'images/ipad-pro-m4.png', badge: 'Latest', category: 'tablets', inStock: true,
+                storageOptions: ['256GB', '512GB', '1TB', '2TB'], colorOptions: ['Space Black', 'Silver'] },
+            { id: 4, brand: 'Apple', name: 'AirPods Pro 2', spec: 'USB-C · Active Noise Cancellation',
+                price: 'Contact for price', icon: '🎧', image: 'images/airpods-pro-2.png', badge: 'Popular', category: 'audio', inStock: true },
+            { id: 5, brand: 'Samsung', name: 'Galaxy Watch 6', spec: 'Classic · 47mm · Bluetooth',
+                price: 'Contact for price', icon: '⌚', image: 'images/galaxy-watch-6.png', badge: '', category: 'wearables', inStock: true,
+                colorOptions: ['Black', 'Silver'] },
+            { id: 6, brand: 'Apple', name: 'iPhone 16 Pro', spec: 'A18 Pro · 128GB · Desert Titanium',
+                price: 'Contact for price', icon: '📱', image: 'images/iphone-16-pro.png', badge: 'New', category: 'smartphones', inStock: true,
+                storageOptions: ['128GB', '256GB', '512GB', '1TB'], colorOptions: ['Desert Titanium', 'Natural Titanium', 'White Titanium', 'Black Titanium'] },
+            { id: 7, brand: 'JBL', name: 'JBL Charge 5', spec: 'Portable · Waterproof · 20hr Battery',
+                price: 'Contact for price', icon: '🔊', image: 'images/jbl-charge-5.png', badge: '', category: 'audio', inStock: true,
+                colorOptions: ['Black', 'Blue', 'Red', 'Gray'] },
+            { id: 8, brand: 'Samsung', name: 'Galaxy Tab S9', spec: 'Snapdragon · 11" · 128GB',
+                price: 'Contact for price', icon: '📋', image: 'images/galaxy-tab-s9.png', badge: '', category: 'tablets', inStock: true,
+                storageOptions: ['128GB', '256GB'], colorOptions: ['Graphite', 'Beige'] },
+        ];
+
+        const newsItems = [
+            { date: '2026-07-20', title: 'New Arrival: Latest Flagship Smartphones Now in Stock',
+                desc: 'Explore the newest premium devices available at Khpalwak Mobiles.', icon: '📱', image: 'images/news-new-arrivals.png' },
+            { date: '2026-07-10', title: 'Trade-In Program: Upgrade Your Device Today',
+                desc: 'Get excellent value for your current device toward a new purchase.', icon: '🔄', image: 'images/news-trade-in.png' },
+            { date: '2026-06-28', title: 'Store Update: Extended Hours for Your Convenience',
+                desc: 'Now open with extended hours to serve you better.', icon: '🏬', image: 'images/news-store-update.png' },
+            { date: '2026-06-15', title: 'Audio Collection: Premium Sound Experience',
+                desc: 'Discover our range of authentic audio products from top brands.', icon: '🎧', image: 'images/news-audio-collection.png' },
+        ];
+
+        // ============ INIT ============
+        function init() {
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            loadCart();
+            renderProducts();
+            renderNews();
+            setupScrollReveal();
+            setupNavScroll();
+            setupTradeInForm();
+            // Loading screen
+            setTimeout(() => {
+                document.getElementById('loadingScreen').classList.add('hidden');
+                document.body.classList.remove('loading-active');
+            }, 1800);
+            updateCartUI();
+        }
+
+        function setupTradeInForm() {
+            const typeField = document.getElementById('tradeDeviceType');
+            const modelField = document.getElementById('tradeDeviceModel');
+            const conditionField = document.getElementById('tradeCondition');
+            const errorBox = document.getElementById('tradeInError');
+            if (!typeField || !modelField || !conditionField) return;
+
+            const clearFieldError = (field) => {
+                field.classList.remove('field-error');
+                if (errorBox) {
+                    errorBox.style.display = 'none';
+                    errorBox.textContent = '';
+                }
+            };
+            typeField.addEventListener('change', () => clearFieldError(typeField));
+            modelField.addEventListener('input', () => clearFieldError(modelField));
+            conditionField.addEventListener('change', () => clearFieldError(conditionField));
+        }
+
+        function renderProducts() {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = products.map(p => `
+            <div class="product-card" data-category="${p.category}">
+              <div class="product-card-image">
+                <img src="${p.image}" alt="${p.brand} ${p.name}" loading="lazy">
+                ${p.badge ? `<span class="product-card-badge">${p.badge}</span>` : ''}
+              </div>
+              <div class="product-card-body">
+                <div class="product-brand">${p.brand}</div>
+                <div class="product-name">${p.name}</div>
+                <div class="product-spec">${p.spec}</div>
+                <div class="product-price">${p.price}</div>
+                <div style="font-size:0.78rem;color:${p.inStock?'var(--success)':'var(--error)'};margin-top:4px;">${p.inStock ? '✓ ' + getTranslation('inStock') : '✕ Out of Stock'}</div>
+                <div class="product-actions">
+                  <button class="btn-sm btn-gold" onclick="openOptionsModal(${p.id})">${getTranslation('addToCart')}</button>
+                  <a href="https://wa.me/93700886988" class="btn-sm" target="_blank" rel="noopener">${getTranslation('whatsappInquiry')}</a>
+                </div>
+              </div>
+            </div>
+          `).join('');
+        }
+
+        function renderNews() {
+            const grid = document.getElementById('newsGrid');
+            grid.innerHTML = newsItems.map(n => `
+            <div class="news-card">
+              <div class="news-card-image"><img src="${n.image}" alt="${n.title}" loading="lazy"></div>
+              <div class="news-card-body">
+                <div class="news-date">${n.date}</div>
+                <div class="news-title">${n.title}</div>
+                <p style="font-size:0.85rem;color:var(--warm-gray);">${n.desc}</p>
+              </div>
+            </div>
+          `).join('');
+        }
+
+        function getTranslation(key) {
+            return translations[currentLang]?.[key] || translations['en'][key] || key;
+        }
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            document.documentElement.dir = (lang === 'fa' || lang === 'ps') ? 'rtl' : 'ltr';
+            document.getElementById('currentLangLabel').textContent = lang.toUpperCase();
+            // Update dropdown active
+            document.querySelectorAll('.lang-dropdown li').forEach(li => {
+                li.classList.toggle('active-lang', li.dataset.lang === lang);
+            });
+            document.getElementById('langDropdown').classList.remove('open');
+            // Update all translatable elements
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (key && translations[lang]?.[key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            // Update placeholders
+            document.querySelectorAll('[data-translate-attr]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (key && translations[lang]?.[key]) {
+                    el.setAttribute('placeholder', translations[lang][key]);
+                }
+            });
+            // Re-render products to update labels
+            renderProducts();
+            updateCartUI();
+        }
+
+        function toggleLangDropdown() {
+            document.getElementById('langDropdown').classList.toggle('open');
+        }
+
+        function toggleMobileMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const menu = document.getElementById('mobileMenu');
+            const isOpen = menu.classList.toggle('open');
+            hamburger.classList.toggle('open', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('hamburger').classList.remove('open');
+            document.getElementById('mobileMenu').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function toggleCart() {
+            const overlay = document.getElementById('cartOverlay');
+            const sidebar = document.getElementById('cartSidebar');
+            const isOpen = sidebar.classList.contains('open');
+            if (isOpen) {
+                overlay.classList.remove('open');
+                sidebar.classList.remove('open');
+            } else {
+                overlay.classList.add('open');
+                sidebar.classList.add('open');
+            }
+        }
+
+        // ============ CART PERSISTENCE (localStorage) ============
+        const CART_STORAGE_KEY = 'khpalwakCart';
+
+        function loadCart() {
+            try {
+                const saved = localStorage.getItem(CART_STORAGE_KEY);
+                cart = saved ? JSON.parse(saved) : [];
+                if (!Array.isArray(cart)) cart = [];
+            } catch (e) {
+                cart = [];
+            }
+        }
+
+        function saveCart() {
+            try {
+                localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+            } catch (e) {
+                // localStorage unavailable — cart still works for this session
+            }
+        }
+
+        // Builds a stable identifier for a specific product + variant combination,
+        // so the same product with different storage/color is a separate cart line.
+        function buildCartLineId(productId, storage, color) {
+            return `${productId}__${storage || 'na'}__${color || 'na'}`;
+        }
+
+        // ============ OPTIONS MODAL (variant selection before adding to cart) ============
+        let activeOptionsProduct = null;
+        let selectedStorage = null;
+        let selectedColor = null;
+
+        function openOptionsModal(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            activeOptionsProduct = product;
+            selectedStorage = product.storageOptions ? product.storageOptions[0] : null;
+            selectedColor = product.colorOptions ? product.colorOptions[0] : null;
+
+            // If the product has no selectable options, add it straight to the cart.
+            if (!product.storageOptions && !product.colorOptions) {
+                confirmAddToCart();
+                return;
+            }
+            renderOptionsModal();
+            document.getElementById('optionsModalOverlay').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function renderOptionsModal() {
+            const product = activeOptionsProduct;
+            if (!product) return;
+            const body = document.getElementById('optionsModalBody');
+            body.innerHTML = `
+              <div class="options-modal-header">
+                <div class="options-modal-img"><img src="${product.image}" alt="${product.name}"></div>
+                <div>
+                  <div class="options-modal-title">${product.name}</div>
+                  <div class="options-modal-price">${product.price}</div>
+                </div>
+              </div>
+              ${product.storageOptions ? `
+                <div class="options-group">
+                  <div class="options-group-label">${getTranslation('storageLabel')}</div>
+                  <div class="options-choices">
+                    ${product.storageOptions.map(s => `
+                      <button type="button" class="option-chip ${s === selectedStorage ? 'selected' : ''}" onclick="selectStorage('${s.replace(/'/g, "\\'")}')">${s}</button>
+                    `).join('')}
+                  </div>
+                </div>` : ''}
+              ${product.colorOptions ? `
+                <div class="options-group">
+                  <div class="options-group-label">${getTranslation('colorLabel')}</div>
+                  <div class="options-choices">
+                    ${product.colorOptions.map(c => `
+                      <button type="button" class="option-chip ${c === selectedColor ? 'selected' : ''}" onclick="selectColor('${c.replace(/'/g, "\\'")}')">${c}</button>
+                    `).join('')}
+                  </div>
+                </div>` : ''}
+              <div class="options-modal-actions">
+                <button type="button" class="btn btn-outline" onclick="closeOptionsModal()">${getTranslation('cancelBtn')}</button>
+                <button type="button" class="btn btn-primary" onclick="confirmAddToCart()">${getTranslation('confirmAdd')}</button>
+              </div>
+            `;
+        }
+
+        function selectStorage(value) {
+            selectedStorage = value;
+            renderOptionsModal();
+        }
+
+        function selectColor(value) {
+            selectedColor = value;
+            renderOptionsModal();
+        }
+
+        function closeOptionsModal(event) {
+            if (event && event.target !== event.currentTarget) return;
+            document.getElementById('optionsModalOverlay').classList.remove('open');
+            document.body.style.overflow = '';
+            activeOptionsProduct = null;
+        }
+
+        // ============ ADD TO CART (adds to cart array only — never opens WhatsApp) ============
+        function confirmAddToCart() {
+            const product = activeOptionsProduct;
+            if (!product) return;
+            const lineId = buildCartLineId(product.id, selectedStorage, selectedColor);
+            const existing = cart.find(item => item.lineId === lineId);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({
+                    lineId,
+                    id: product.id,
+                    name: product.name,
+                    brand: product.brand,
+                    spec: product.spec,
+                    price: product.price,
+                    image: product.image,
+                    storage: selectedStorage || null,
+                    color: selectedColor || null,
+                    qty: 1
+                });
+            }
+            saveCart();
+            updateCartUI();
+            document.getElementById('optionsModalOverlay').classList.remove('open');
+            document.body.style.overflow = '';
+            activeOptionsProduct = null;
+
+            // Briefly reveal the cart sidebar as feedback, then close automatically.
+            const sidebar = document.getElementById('cartSidebar');
+            document.getElementById('cartOverlay').classList.add('open');
+            sidebar.classList.add('open');
+            setTimeout(() => {
+                document.getElementById('cartOverlay').classList.remove('open');
+                sidebar.classList.remove('open');
+            }, 1600);
+        }
+
+        function changeQty(lineId, delta) {
+            const item = cart.find(i => i.lineId === lineId);
+            if (!item) return;
+            item.qty += delta;
+            if (item.qty <= 0) {
+                cart = cart.filter(i => i.lineId !== lineId);
+            }
+            saveCart();
+            updateCartUI();
+        }
+
+        function removeFromCart(lineId) {
+            cart = cart.filter(item => item.lineId !== lineId);
+            saveCart();
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            const cartCountBadge = document.getElementById('cartCountBadge');
+            const cartCountBadgeMobile = document.getElementById('cartCountBadgeMobile');
+            const orderBtn = document.getElementById('orderWhatsAppBtn');
+            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+            cartCountBadge.textContent = totalItems;
+            if (cartCountBadgeMobile) cartCountBadgeMobile.textContent = totalItems;
+            if (cart.length === 0) {
+                cartItems.innerHTML =
+                    `<div class="cart-empty">${getTranslation('cartEmpty')}</div>`;
+                cartTotal.textContent = '0 AFN';
+                if (orderBtn) orderBtn.style.opacity = '0.5';
+            } else {
+                cartItems.innerHTML = cart.map(item => {
+                    const variantParts = [];
+                    if (item.storage) variantParts.push(item.storage);
+                    if (item.color) variantParts.push(item.color);
+                    const variantLine = variantParts.length ? `<div class="cart-item-variant">${variantParts.join(' · ')}</div>` : '';
+                    return `
+              <div class="cart-item">
+                <div class="cart-item-img"><img src="${item.image}" alt="${item.name}"></div>
+                <div class="cart-item-info">
+                  <div class="cart-item-name">${item.name}</div>
+                  ${variantLine}
+                  <div class="cart-item-price">${item.price}</div>
+                  <div class="cart-item-qty-row">
+                    <div class="qty-control">
+                      <button class="qty-btn" onclick="changeQty('${item.lineId}', -1)" aria-label="Decrease quantity">−</button>
+                      <span class="qty-value">${item.qty}</span>
+                      <button class="qty-btn" onclick="changeQty('${item.lineId}', 1)" aria-label="Increase quantity">+</button>
+                    </div>
+                  </div>
+                </div>
+                <button class="cart-remove" onclick="removeFromCart('${item.lineId}')">✕</button>
+              </div>
+            `;
+                }).join('');
+                cartTotal.textContent = 'Contact for total';
+                if (orderBtn) orderBtn.style.opacity = '1';
+            }
+        }
+
+        // ============ ORDER VIA WHATSAPP (only trigger that opens WhatsApp) ============
+        function orderViaWhatsApp() {
+            if (cart.length === 0) {
+                alert(getTranslation('cartEmptyAlert'));
+                return;
+            }
+
+            const lines = [];
+            lines.push('Hello KHPALWAK MOBILES,');
+            lines.push('');
+            lines.push('I would like to place an order/inquiry for the following products:');
+            lines.push('');
+
+            let totalItems = 0;
+            cart.forEach((item, index) => {
+                totalItems += item.qty;
+                lines.push(`${index + 1}. ${item.name}`);
+                if (item.storage) lines.push(`   Variant: ${item.storage}`);
+                if (item.color) lines.push(`   Color: ${item.color}`);
+                lines.push(`   Quantity: ${item.qty}`);
+                lines.push(`   Price: ${item.price}`);
+                lines.push('');
+            });
+
+            lines.push(`Total Items: ${totalItems}`);
+            lines.push('Total: Contact for total');
+            lines.push('');
+            lines.push('Please confirm availability, final prices, and order details.');
+            lines.push('');
+            lines.push('Thank you.');
+
+            const message = lines.join('\n');
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/93700886988?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank', 'noopener');
+        }
+
+        // ============ TRADE-IN APPRAISAL REQUEST ============
+        function requestTradeInAppraisal() {
+            const typeField = document.getElementById('tradeDeviceType');
+            const modelField = document.getElementById('tradeDeviceModel');
+            const conditionField = document.getElementById('tradeCondition');
+            const errorBox = document.getElementById('tradeInError');
+
+            const deviceType = typeField.value.trim();
+            const deviceModel = modelField.value.trim();
+            const condition = conditionField.value.trim();
+
+            // Clear previous error state
+            [typeField, modelField, conditionField].forEach(f => f.classList.remove('field-error'));
+            errorBox.style.display = 'none';
+            errorBox.textContent = '';
+
+            // Validate required fields
+            if (!deviceType) {
+                typeField.classList.add('field-error');
+                errorBox.textContent = getTranslation('tradeErrorDeviceType');
+                errorBox.style.display = 'block';
+                typeField.focus();
+                return;
+            }
+            if (!deviceModel) {
+                modelField.classList.add('field-error');
+                errorBox.textContent = getTranslation('tradeErrorModel');
+                errorBox.style.display = 'block';
+                modelField.focus();
+                return;
+            }
+            if (!condition) {
+                conditionField.classList.add('field-error');
+                errorBox.textContent = getTranslation('tradeErrorCondition');
+                errorBox.style.display = 'block';
+                conditionField.focus();
+                return;
+            }
+
+            // Build the WhatsApp message with the customer's actual entered values
+            const lines = [];
+            lines.push('Hello KHPALWAK MOBILES,');
+            lines.push('');
+            lines.push('I would like to request a trade-in appraisal.');
+            lines.push('');
+            lines.push(`Device Type: ${deviceType}`);
+            lines.push(`Device Model: ${deviceModel}`);
+            lines.push(`Condition: ${condition}`);
+            lines.push('');
+            lines.push('Please evaluate my device and let me know its estimated trade-in value.');
+            lines.push('');
+            lines.push('Thank you.');
+
+            const message = lines.join('\n');
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/93700886988?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank', 'noopener');
+        }
+
+        function setupScrollReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+
+        function setupNavScroll() {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 60) {
+                    navbar.classList.add('compact');
+                } else {
+                    navbar.classList.remove('compact');
+                }
+            });
+        }
+
+        // Close dropdown on outside click
+        document.addEventListener('click', (e) => {
+            const dropdown = document.getElementById('langDropdown');
+            const display = document.getElementById('langDisplay');
+            if (dropdown.classList.contains('open') && !display.contains(e.target) && !dropdown.contains(e
+                    .target)) {
+                dropdown.classList.remove('open');
+            }
+        });
+
+        // Init
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
